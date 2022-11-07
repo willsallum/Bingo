@@ -1,0 +1,155 @@
+body {
+    background-color:#0094BB;
+    font:12px Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.inicia {background-color: rgb(213, 245, 245);
+        font-size: xx-large;
+}
+
+td {cursor: pointer;}
+
+.normal {display: flex;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        float: left;
+        margin: 6px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #555;
+        background: linear-gradient(180deg, #f5f5f5 0%, #f5f5f5 16%, #999999 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#999999',GradientType=0 );
+}
+
+.sorteado {background: linear-gradient(180deg, #f1b8b8 0%, #f38989 16%, #3d0202 100%);
+           color: white;
+}
+
+.btn {
+    position: absolute;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: white;
+    border: 2px solid #f6f1f0;
+    border-radius: 0.6em;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+.btn:hover, .btn:focus {color: #fff;
+                        outline: 0;
+}
+
+.first {-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+        transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+        top: 89%;
+        left: 12%;
+}
+.first:hover {box-shadow: 0 0 40px 40px #7d5de8 inset;
+}
+
+.secound {-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+          transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+          left: 48%;
+          top: 45%;
+}
+.secound:hover {box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+.terceiro {-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+           transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+           left: 72%;
+           top: 45%;
+}
+.terceiro:hover {box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+div img {position: absolute;
+        left: 75%;
+        top: 5%;
+        z-index: 10;
+}
+
+#div-imagem {background-color: white;
+             position: absolute;
+             top: 1%;
+             left: 42%;
+             width: 57%;
+             height: 45%;
+             z-index: 1;
+}
+
+/* Configuração para a 2a TABELA */
+.vazio {font-size: small;
+        position: absolute;
+        top: 65%;
+        left: 42%;
+        width: 57%;
+        height: 25%;
+}
+
+/* Controle da BOLA saltitando */
+#bola {position: absolute;
+        left: 60%;
+        top: 2%;
+        line-height: 4rem;
+}
+#texto1 {
+        position: absolute;
+        left: 1.0rem;
+        top: 3rem;
+        font-size: 4rem;
+        background-color: rgb(192, 191, 191);
+        width: 5.5rem;
+        height: 5.5rem;
+        padding-bottom: 0rem;
+        padding-top: 1rem;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        text-align: center;
+        border-radius: 50%;
+}
+.ball {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background-color: #080d93;
+        animation: bounce 0.8s;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+        animation-iteration-count: infinite;
+        background-image: linear-gradient(white 0%, rgb(145, 125, 247) 25%, blue 100%);
+
+}
+@keyframes bounce {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+        to {
+            transform: translate3d(0, 160px, 0);
+        }
+}
+
