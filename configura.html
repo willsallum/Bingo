@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/config.css">
+    <title>Configurações</title>
+</head>
+<body>
+    <h1>MENU DAS CONFIGURAÇÕES</h1>
+    <table id="tabela4">
+        <tr>
+            <td>
+                <button id="bt1">Cadastra Nomes</button><br> <!-- Cadastro.html -->
+                <button id="bt2">Cadastra as Cartelas</button><br> <!-- Cadastro.html -->
+                <button id="bt3">Somatório das Bolas</button><br>
+                <button id="bt4">Zera os Sorteios</button><br> <!-- zera_sorteios.php -->
+                <button id="bt5">Limpa os Nomes</button><br> <!-- zera_nomes.php -->
+                <button id="bt6">Zera os Rank (rank)</button><br> <!-- zera_rank.php -->
+                <button id="bt7">Apaga os Numeros <span style="color:red;">(cuidado!)</span></button> <!-- zera_bolas.php -->
+            </td>
+            <td>
+                <h3>Configuração dos Sons</h3>
+                <input type="checkbox" id="boxSorteia"> Som de Sorteio<br>
+                <input type="checkbox" id="boxParada"> Som de Parada<br>
+                <input type="checkbox" id="boxVitoria"> Som de Vitoria<br>
+                <h3>Funcionalidades dos sorteios</h3>
+                <input type="checkbox" id="boxLinha"> Seleciona sorteio de Linha<br>
+                <input type="checkbox" id="boxCartela"> Seleciona sorteio de Cartela Inteira
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><span id="mens"> </span></td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="config.js"></script>
+</body>
+</html>

@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="bingo.css" rel="stylesheet">
+    <title>BINGO da Harumi</title>
+    <link rel="stylesheet" href="css/bingo.css">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./libgif.js"></script>
-    <script type="text/javascript" src="./rubbable.js"></script>
+    <script type="text/javascript" src="libgif.js"></script>
+    <script type="text/javascript" src="rubbable.js"></script>
 </head>
 <body>
-    <div id="div-imagem">
-        <img id="roleta" class="roleta" src="roleta.jpg" rel:animated_src="https://content.presentermedia.com/content/animsp/00016000/16356/bingo_ball_color_winner_300_wht.gif" rel:auto_play="0" rel:rubbable="1" />
-        <div id="bola"><div class="ball"><span id='texto1'>??</span></div></div>
-        
+    <marquee width=23rem height=100% direction=UP> <h2>B<br/>&nbsp;I<br/>N<br/>G<br/>O<br/></h2> <h3><br/>da<br/></h3> <h2><br/>H<br/>A<br/>R<br/>U<br/>M<br/>&nbsp;I</h2> </marquee>
+    <div id="div-imagem" >
+        <img id="roleta" class="roleta" src="img/roleta_transparente_dourada_100.gif" rel:auto_play="0" rel:rubbable="1" />
     </div>
+    <div id="div-tabela1">
+        <table class="inicia" id='tabela1' style="border:'1'; width:37rem"></table>
+    </div>
+    <div id="bola">
+        <div class="ball">
+            <span id='texto1'>??</span>
+        </div>
+    </div>
+    <div id="div-letreiro">
+        <img id="letreiro" src="img/letreiro_1_transp.gif" ondblclick="func();"/>
+    </div>
+    <button class="custom-btn btn-12 btn first" id="sortear"><span>🍀 🍀 🍀</span><span>SORTEAR</span></button>
+    <button class="button-parar btn secound" id="parar"><span>PARAR parar </span></button>
+    <button class="glow-on-hover btn third" id="reiniciar" type="button">Reiniciar Jogo!</button>
+    <div id="creditos">©Copyright  Sallum.tec.br    -    Written & Design by Prof. Sallum</div>
+    <div class="blink" style="visibility: hidden;"></div>
+    <audio controls="controls" autoplay="autoplay"></audio>
     <script src="bingo.js"></script>
+	<!-- src="https://content.presentermedia.com/content/animsp/00016000/16356/bingo_ball_color_winner_300_wht.gif" -->
 </body>
 </html>
