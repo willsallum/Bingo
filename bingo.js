@@ -80,7 +80,7 @@ $para.on('click', function(){
         numero = '0'+numero;
     }
     tipo = 'marca';
-    $.ajax({url: "sorteia.php", type: "POST", data: {tipo, dados}, success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/sorteia.php", type: "POST", data: {tipo, dados}, success: function(result, status){
         if(result != '') {
             $('.blink').css("visibility", "visible");
             $('.blink').html(result+"<br>");
