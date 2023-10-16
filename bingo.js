@@ -32,7 +32,7 @@ function reinicio() {
             $('#_'+c+''+l).removeClass('sorteado');
         }
     }
-    $.ajax({url: "zera_sorteios.php", type: "POST", success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/zera_sorteios.php", type: "POST", success: function(result, status){
         if(result.substring(0, 3) == '<h3')
             alert(status+": Erro de Conexão ou do Sistema!");
     }}); 
