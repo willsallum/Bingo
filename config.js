@@ -29,7 +29,7 @@ $('#boxCartela').on('click', function(){
 });
 function alteraConfig(){
     //alert('entrou no alteraConfig com tipo = '+tipo);
-    $.ajax({url: "config.php", type: "POST",  data: {tipo, dados}, success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/config.php", type: "POST",  data: {tipo, dados}, success: function(result, status){
         if(status != ""){
             //alert('entrou no AJAX>>'+status+': '+result);
             tipo = result.split('.');
@@ -52,31 +52,31 @@ $('#bt2').click(function(){
     window.location.href = "cadastra_cartelas.html";
 });
 $('#bt3').click(function(){
-    $.ajax({url: "somatorio_linhas.php", type: "POST", success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/somatorio_linhas.php", type: "POST", success: function(result, status){
         $('#mens').html(status+': '+result);
     }});
 });
 $('#bt4').click(function(){
-    $.ajax({url: "zera_sorteios.php", type: "POST", success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/zera_sorteios.php", type: "POST", success: function(result, status){
         $('#mens').html(status+': '+result);
     }});
 });
 $('#bt5').click(function(){
-    $.ajax({url: "zera_nomes.php", type: "POST", success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/zera_nomes.php", type: "POST", success: function(result, status){
         $('#mens').html(status+': '+result);
     }});
 });
 $('#bt6').click(function(){
-    $.ajax({url: "zera_rank.php", type: "POST", success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/zera_rank.php", type: "POST", success: function(result, status){
         $('#mens').html(status+': '+result);
     }});
 });
 $('#bt7').click(function(){
     $conf = confirm("ATENÇÃO!!! VOCÊ TEM CERTEZA QUE DESEJA APAGAR TODOS OS NÚMEROS???");
     if($conf){
-        $.ajax({url: "backupBD.php", type: "POST", success: function(result, status){
+        $.ajax({url: "https://sallum.tec.br/bingo/backupBD.php", type: "POST", success: function(result, status){
             if(result == true){
-                $.ajax({url: "zera_bolas.php", type: "POST", success: function(result, status){
+                $.ajax({url: "https://sallum.tec.br/bingo/zera_bolas.php", type: "POST", success: function(result, status){
                     $('#mens').html(status+': '+result);
                 }});
                 $('#mens').html("<h2 style='color:blue;'>Números de bolas reiniciados e Backup gerado!</h2>");
