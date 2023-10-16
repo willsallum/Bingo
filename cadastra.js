@@ -4,7 +4,7 @@ $(document).ready(function() {
     //alert("dentro");
     let tipo = 'inicia';
     let dados = '' ;
-    $.ajax({url: "bingo.php", type: "POST", data: {tipo, dados}, success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/bingo.php", type: "POST", data: {tipo, dados}, success: function(result, status){
         (status != "")? montaTabela(result): alert("conexão NÂO estabelecida!");
     }});
 });
@@ -41,7 +41,7 @@ function altera(t){
     let tipo = t.id;
     let dados = t.value;
     //alert(tipo+"/"+dados);
-    $.ajax({url: "bingo.php", type: "POST", data: {tipo, dados}, success: function(result, status){
+    $.ajax({url: "https://sallum.tec.br/bingo/bingo.php", type: "POST", data: {tipo, dados}, success: function(result, status){
         //(status != "")? alert(result): alert("conexão NÂO estabelecida!");
         //alert(status+': '+result);
     }});
